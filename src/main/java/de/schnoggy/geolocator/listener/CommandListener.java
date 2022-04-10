@@ -4,13 +4,19 @@ import de.schnoggy.geolocator.GeoLocator;
 import de.schnoggy.geolocator.util.Command;
 import de.schnoggy.geolocator.util.Embed;
 import de.schnoggy.geolocator.util.User;
+import net.dv8tion.jda.api.entities.ChannelType;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /***********************************
  * User: Malvin H.

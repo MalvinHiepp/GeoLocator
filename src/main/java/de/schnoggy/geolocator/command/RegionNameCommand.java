@@ -36,7 +36,7 @@ public class RegionNameCommand extends Command {
                 JSONObject jsonObject = locateService.queryIP(args[0]);
 
                 try {
-                    sendEmbed(Embed.getEmbed("**Regionname**", "\n Regionname: " + jsonObject.getString("regionName"), Color.GREEN));
+                    sendEmbed(Embed.getEmbed("**Regionname**", "Regionname: " + jsonObject.getString("regionName"), Color.GREEN));
                 } catch (Exception e) {
                     if (jsonObject.getString("status").equals("fail")) {
                         sendEmbed(Embed.getEmbed("**Regionname**", "IP not found!",

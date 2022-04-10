@@ -37,16 +37,16 @@ public class LocateCommand extends Command {
                 try {
                     sendEmbed(Embed.getEmbed("**Location**",
                             "Country: " + jsonObject.getString("country") +
-                                    "\n City: " + jsonObject.getString("city") +
-                                    "\n Countrycode: " + jsonObject.getString("countryCode") +
-                                    "\n Region: " + jsonObject.getString("region") +
-                                    "\n Regionname: " + jsonObject.getString("regionName") +
-                                    "\n Isp: " + jsonObject.getString("isp") +
-                                    "\n Asn: " + jsonObject.getString("as") +
-                                    "\n Timezone: " + jsonObject.getString("timezone") +
-                                    "\n Organisation: " + jsonObject.getString("org") +
-                                    "\n Zip: " + jsonObject.getInt("zip") +
-                                    "\n Lat: " + jsonObject.getFloat("lat") + ", Lon: " + jsonObject.getFloat("lon"),
+                                    "\nCity: " + jsonObject.getString("city") +
+                                    "\nCountrycode: " + jsonObject.getString("countryCode") +
+                                    "\nRegion: " + jsonObject.getString("region") +
+                                    "\nRegionname: " + jsonObject.getString("regionName") +
+                                    "\nIsp: " + jsonObject.getString("isp") +
+                                    "\nAsn: " + jsonObject.getString("as") +
+                                    "\nTimezone: " + jsonObject.getString("timezone") +
+                                    "\nOrganisation: " + jsonObject.getString("org") +
+                                    "\nZip: " + jsonObject.getString("zip") +
+                                    "\nLat: " + jsonObject.getFloat("lat") + ", Lon: " + jsonObject.getFloat("lon"),
                             Color.GREEN));
                 } catch (Exception e) {
                     if (jsonObject.getString("status").equals("fail")) {

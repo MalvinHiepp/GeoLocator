@@ -36,7 +36,7 @@ public class TimeZoneCommand extends Command {
                 JSONObject jsonObject = locateService.queryIP(args[0]);
 
                 try {
-                    sendEmbed(Embed.getEmbed("**Timezone", "\n Timezone: " + jsonObject.getString("timezone"), Color.GREEN));
+                    sendEmbed(Embed.getEmbed("**Timezone", "Timezone: " + jsonObject.getString("timezone"), Color.GREEN));
                 } catch (Exception e) {
                     if (jsonObject.getString("status").equals("fail")) {
                         sendEmbed(Embed.getEmbed("**Timezone**", "IP not found!",

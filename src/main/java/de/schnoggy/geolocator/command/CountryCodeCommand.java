@@ -2,6 +2,8 @@ package de.schnoggy.geolocator.command;
 
 import de.schnoggy.geolocator.GeoLocator;
 import de.schnoggy.geolocator.util.*;
+import net.dv8tion.jda.api.entities.ChannelType;
+import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.TextChannel;
 import org.json.JSONObject;
 
@@ -43,6 +45,7 @@ public class CountryCodeCommand extends Command {
                                 Color.RED));
                     }
                 }
+
 
                 break;
             }

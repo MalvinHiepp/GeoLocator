@@ -36,7 +36,7 @@ public class ZipCommand extends Command {
                 JSONObject jsonObject = locateService.queryIP(args[0]);
 
                 try {
-                    sendEmbed(Embed.getEmbed("**Zip**", "\n Zip: " + jsonObject.getInt("zip"), Color.GREEN));
+                    sendEmbed(Embed.getEmbed("**Zip**", "Zip: " + jsonObject.getString("zip"), Color.GREEN));
                 } catch (Exception e) {
                     if (jsonObject.getString("status").equals("fail")) {
                         sendEmbed(Embed.getEmbed("**Zip**", "IP not found!",

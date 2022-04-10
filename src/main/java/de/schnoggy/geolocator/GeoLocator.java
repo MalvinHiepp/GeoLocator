@@ -1,5 +1,6 @@
 package de.schnoggy.geolocator;
 
+import de.schnoggy.geolocator.command.*;
 import de.schnoggy.geolocator.listener.CommandListener;
 import de.schnoggy.geolocator.util.CommandHandler;
 import de.schnoggy.geolocator.util.LocateService;
@@ -48,6 +49,25 @@ public class GeoLocator {
         commandHandler = new CommandHandler();
         commandHandler.loadCommands();
         locateService = new LocateService();
+
+        registerCommand();
+    }
+
+    public void registerCommand(){
+        commandHandler.loadCommand(new HelpCommand());
+        commandHandler.loadCommand(new AsnCommand());
+        commandHandler.loadCommand(new CountryCodeCommand());
+        commandHandler.loadCommand(new CountryCommand());
+        commandHandler.loadCommand(new CityCommand());
+        commandHandler.loadCommand(new InfoCommand());
+        commandHandler.loadCommand(new IspCommand());
+        commandHandler.loadCommand(new LatLongCommand());
+        commandHandler.loadCommand(new LocateCommand());
+        commandHandler.loadCommand(new OrganisationCommand());
+        commandHandler.loadCommand(new RegionCommand());
+        commandHandler.loadCommand(new RegionNameCommand());
+        commandHandler.loadCommand(new TimeZoneCommand());
+        commandHandler.loadCommand(new ZipCommand());
     }
 
     public static GeoLocator getInstance() {

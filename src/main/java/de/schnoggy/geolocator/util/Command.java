@@ -2,11 +2,17 @@ package de.schnoggy.geolocator.util;
 
 import de.schnoggy.geolocator.GeoLocator;
 import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.PrivateChannel;
 import net.dv8tion.jda.api.entities.TextChannel;
 
 import java.awt.*;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /***********************************
  * User: Malvin H.
@@ -36,6 +42,7 @@ public abstract class Command {
             if (!user.hasPermission(this.permission)) {
                 channel.sendMessageEmbeds(Embed.getEmbed("**No Permissions!**", "You lack the permission: **" + this.permission + "**", Color.RED).build())
                         .queue(message -> this.deleteAfter(message, 5));
+
                 return;
             }
         }
@@ -90,7 +97,9 @@ public abstract class Command {
     }
 
     public void initialize() {
+
     }
 
     public abstract void onCommand(User user, TextChannel channel, String[] args) throws IOException;
+
 }

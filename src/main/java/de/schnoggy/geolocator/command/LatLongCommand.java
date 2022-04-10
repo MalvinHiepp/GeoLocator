@@ -36,7 +36,7 @@ public class LatLongCommand extends Command {
                 JSONObject jsonObject = locateService.queryIP(args[0]);
 
                 try {
-                    sendEmbed(Embed.getEmbed("**Latlong**", "\n Lat: " + jsonObject.getFloat("lat") + ", Lon: " + jsonObject.getFloat("lon"), Color.GREEN));
+                    sendEmbed(Embed.getEmbed("**Latlong**", "Lat: " + jsonObject.getFloat("lat") + ", Lon: " + jsonObject.getFloat("lon"), Color.GREEN));
                 } catch (Exception e) {
                     if (jsonObject.getString("status").equals("fail")) {
                         sendEmbed(Embed.getEmbed("**Latlong**", "IP not found!",

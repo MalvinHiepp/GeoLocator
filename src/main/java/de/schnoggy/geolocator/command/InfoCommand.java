@@ -27,10 +27,10 @@ public class InfoCommand extends Command {
     @Override
     public void onCommand(User user, TextChannel channel, String[] args) {
         sendEmbed(Embed.getEmbed("**Info**", "Author: <@593072039003160595>" +
-                " \n Version: " + GeoLocator.getInstance().getVersion() +
-                " \n GitHub-Project: https://github.com/schnoggy/GeoLocator" +
-                "\n Servercount: " + GeoLocator.getInstance().getJda().getGuilds().size() +
-                "\n Invite: https://discord.com/oauth2/authorize?client_id=962333791798575155&scope=bot&permissions=274877975552",
+                "\nVersion: " + GeoLocator.getInstance().getVersion() +
+                "\nGitHub-Project: https://github.com/schnoggy/GeoLocator" +
+                "\nServercount: " + GeoLocator.getInstance().getJda().getGuilds().size() +
+                "\nInvite: https://discord.com/oauth2/authorize?client_id=962333791798575155&scope=bot&permissions=274877975552",
                 Color.GREEN));
     }
 }

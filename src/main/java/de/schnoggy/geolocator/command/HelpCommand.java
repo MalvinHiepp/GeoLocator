@@ -26,19 +26,19 @@ public class HelpCommand extends Command {
 
     @Override
     public void onCommand(User user, TextChannel channel, String[] args) {
-        sendEmbed(Embed.getEmbed("**Help**", ":country <ip> " +
-                        "\n :city <ip> " +
-                        "\n :countrycode <ip> " +
-                        "\n :region <ip> " +
-                        "\n :regionname <ip> " +
-                        "\n :isp <ip> " +
-                        "\n :asn <ip> " +
-                        "\n :timezone <ip> " +
-                        "\n :organisation <ip> " +
-                        "\n :locate <ip>" +
-                        "\n :latlong <ip> " +
-                        "\n :zip <ip> " +
-                        "\n :info",
+        sendEmbed(Embed.getEmbed("**Help**", ":locate <ip>" +
+                        "\n:country <ip> " +
+                        "\n:city <ip> " +
+                        "\n:countrycode <ip> " +
+                        "\n:region <ip> " +
+                        "\n:regionname <ip> " +
+                        "\n:isp <ip> " +
+                        "\n:asn <ip> " +
+                        "\n:timezone <ip> " +
+                        "\n:organisation <ip> " +
+                        "\n:latlong <ip> " +
+                        "\n:zip <ip> " +
+                        "\n:info",
                 Color.GREEN));
     }
 }
